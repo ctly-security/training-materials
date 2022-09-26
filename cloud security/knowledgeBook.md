@@ -1,4 +1,4 @@
-# Knowledge Book for Cloud Security
+# Knowledge Book for Information Security Professional
 
 The purpose of this document is to list down useful websites and documents, as part of the Cloud security journey.
 
@@ -24,3 +24,25 @@ Typically NIST Framework will cover the 5 domains, which are Identify, Protect, 
 https://www.nist.gov/cyberframework/infographic
 
 https://www.nist.gov/document/2018-04-16frameworkv11core1xlsx
+
+## Security Vulnerability and Hardening
+### CIS Benchmark
+CIS Benchmark is widely use to hardening and securing services, databases and servers.
+
+It recommends a set of configuration for each of the services that reduces the threat surface of a service.
+
+Many misconfiguration may occur on services or endpoints, which leads to an increase in threat surface and exposure, hence it is important to have the serivces harden base on CIS Benchmark.
+
+This is fairly important as many data breaches incident are due to misconfiguration of services. For example, having a database that is publicly accessible.
+
+https://www.cisecurity.org/cis-benchmarks/
+
+### CVE
+CVE is the common language for identified vulnerability.
+
+Whenever a security researcher has found a vulnerability that can be exploited by malicious user, it will be tagged with a number commonly known as Common Vulnerability and Exposure, CVE.
+This will be kept it as a record and tag it accordingly, and it's a common langauge for that particular vulnerability.
+
+An example of a Apple phone vulnerability:
+https://nvd.nist.gov/vuln/detail/CVE-2022-32894
+
