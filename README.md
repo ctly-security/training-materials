@@ -1,2 +1,2 @@
-# Certification
-Certification materials that I have used to pass the certification.
+# Training Materials
+Training materials that I have used to pass the certification.
