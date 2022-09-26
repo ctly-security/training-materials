@@ -1,0 +1,46 @@
+Get & install Mysql :
+
+wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+
+yum localinstall mysql57-community-release-el7-11.noarch.rpm
+
+yum install mysql-community-server
+
+systemctl status mysqld.service
+
+grep 'temporary password' /var/log/mysqld.log
+
+
+Get & Wordpress :
+
+wget http://wordpress.org/latest.tar.gz
+
+tar -xzvf latest.tar.gz
+
+
+mv wp-config-sample.php wp-config.php
+vi wp-config.php
+
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html
+
+##############
+
+$cfg['Servers'][$i]['auth_type'] = 'config';
+$cfg['Servers'][$i]['connect_type'] = 'tcp';
+/* Server parameters */
+$cfg['Servers'][$i]['host'] = '10.0.2.80';
+$cfg['Servers'][$i]['port'] = '3306';
+$cfg['Servers'][$i]['user'] = 'SAMC';
+$cfg['Servers'][$i]['password'] = 'P@ssw0rd';
+$cfg['Servers'][$i]['extension'] = 'mysqli';
+
+
+
+GRANT ALL PRIVILEGES ON * . * TO 'user1'@'10.10.8.196' IDENTIFIED BY 'Cxxx@aws';
+FLUSH PRIVILEGES ;
+
+
+
+
+
