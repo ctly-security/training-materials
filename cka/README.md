@@ -44,22 +44,34 @@ kubectl create -f nginx-deployment.yaml
 
 #### other commands
 ```
-kubectl get pods -o wide
+# pods
+kubectl get pods -o wide --namespace=dev
 kubectl delete pod <pod_name> 
 kubectl describe pod <pod_name> 
 kubectl run nginx --image=nginx  
 
 kubectl run redis --image=redis123 --dry-run=client -o yaml > testing.yaml 
 
+# definition
 kubectl create -f pod-definition.yaml 
 kubectl delete -f pod-definition.yaml 
 kubectl apply -f pod-definition.yaml 
 kubectl get replicationcontroller 
 
+# Replica Set
 kubectl get replicaset
 kubectl replace -f replicaset-definition.yaml 
 kubectl scale --replicas=6 -f replicaset-definition.yaml 
 kubectl scale --replicas=6 replicaset myapp-replicaset
+
+# Namespace
+kubectl create -f namespace-dev.yml
+kubectl create namespace dev
+
+# to switch to DEV namespace
+kubectl config set-context $(kubectl config curent-context) --namespace=dev
+
+kubectl get pods --all-namespaces
 ```
 
 ### Example of pod.yaml: 
@@ -68,7 +80,8 @@ apiVersion: v1
 kind: Pod 
 metadata: 
   name: webserver 
-  type: front-end 
+  type: front-end
+  namespace: dev
 spec: 
   containers: 
     - name: nginx 
@@ -173,6 +186,31 @@ spec:
     - targetPort: 80
       port: 80
       nodePort: 30008
+```
+
+### Example of namespace
+```yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+```
+
+### Example of resource quota
+```yaml
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: compute-quota
+  namespace: dev
+  
+spec:
+  hard:
+    pods: "10"
+    requests.cpu: "4"
+    requests.memory: 5Gi
+    limits.cpu: "10"
+    limits.memory: 10Gi
 ```
 
 ## Certified Kubernetes Security Specialist (CKS)
