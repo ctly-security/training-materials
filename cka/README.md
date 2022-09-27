@@ -10,32 +10,40 @@ https://prudentialservices.udemy.com/course/certified-kubernetes-administrator-w
 
 Once you passed CKA, you can take for Certified Kubernetes Security Specialist (CKS). 
 
-## Useful Commands to Remember
+### Useful Commands to Remember
 
-### Create an NGINX Pod
+#### Create an NGINX Pod
 ```
 kubectl run nginx --image=nginx
+```
 
-Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
-
+#### Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
+```
 kubectl run nginx --image=nginx --dry-run=client -o yaml
+```
 
-Create a deployment
-
+#### Create a deployment
+```
 kubectl create deployment --image=nginx nginx
+```
 
-Generate Deployment YAML file (-o yaml). Don't create it(--dry-run)
-
+#### Generate Deployment YAML file (-o yaml). Don't create it(--dry-run)
+```
 kubectl create deployment --image=nginx nginx --dry-run=client -o yaml
+```
 
-Generate Deployment YAML file (-o yaml). Don't create it(--dry-run) with 4 Replicas (--replicas=4)
-
+#### Generate Deployment YAML file (-o yaml). Don't create it(--dry-run) with 4 Replicas (--replicas=4)
+```
 kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yaml
+```
 
-Save it to a file, make necessary changes to the file (for example, adding more replicas) and then create the deployment.
-
+#### Save it to a file, make necessary changes to the file (for example, adding more replicas) and then create the deployment.
+```
 kubectl create -f nginx-deployment.yaml
+```
 
+#### other commands
+```
 kubectl get pods -o wide
 kubectl delete pod <pod_name> 
 kubectl describe pod <pod_name> 
