@@ -2,6 +2,22 @@
 
 The purpose of this document is to list down useful websites and documents, as part of the Cloud security journey.
 
+# Career Development
+### CISM
+
+Certified Information Security Manager (CISM) by ISACA is a well known certification that every information security professional aims to have. it provides the necessary knowledge in information security governance, program development and management, incident management and risk management of an organizition. 
+
+Typically an organization will indicate that the candidate they are looking for **must** have either CISM or CISSP.
+
+https://www.isaca.org/credentialing/cism
+
+### CISSP
+Certified Information System Security Professional (CISSP) is another well known certification in the information security industry. it provides you the information and knowledge to effectively design, implement and manage a best-in-class cybersecurity program.
+
+Typically an organization will indicate that the candidate they are looking for **must** have either CISM or CISSP.
+
+https://www.isc2.org/Certifications/CISSP#
+
 ## Compliance 
 ### MAS
 The Monetary Authority of Singapore (MAS) is Singapore’s central bank and integrated financial regulator. MAS also works with the financial industry to develop Singapore as a dynamic international financial centre.
