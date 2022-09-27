@@ -143,7 +143,7 @@ spec:
 ```
 
 ### Example of Service (ClusterIP)
-'''yaml
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -158,7 +158,7 @@ spec:
   selector:
     app: myapp
     type: back-end
-'''
+```
 
 ### Example of Service (LoadBalancer, only for GCP, Azure and AWS)
 ```yaml
