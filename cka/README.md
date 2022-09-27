@@ -11,9 +11,9 @@ https://prudentialservices.udemy.com/course/certified-kubernetes-administrator-w
 Once you passed CKA, you can take for Certified Kubernetes Security Specialist (CKS). 
 
 ## Useful Commands to Remember
-```
-Create an NGINX Pod
 
+### Create an NGINX Pod
+```
 kubectl run nginx --image=nginx
 
 Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
