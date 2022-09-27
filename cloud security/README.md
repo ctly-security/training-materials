@@ -25,6 +25,14 @@ https://www.nist.gov/cyberframework/infographic
 
 https://www.nist.gov/document/2018-04-16frameworkv11core1xlsx
 
+### Cloud Security Alliance (CSA)
+a widely known organization that helps organization to implement best practices to secure the organization cloud environment. Have very useful articles and Cloud Control Matrix (CCM) is a good tool to assess the clodu environment.
+
+https://cloudsecurityalliance.org/artifacts/top-threats-to-cloud-computing-pandemic-eleven/
+
+CCM:
+https://cloudsecurityalliance.org/research/cloud-controls-matrix/
+
 ## Security Vulnerability and Hardening
 ### CIS Benchmark
 CIS Benchmark is widely use to hardening and securing services, databases and servers.
