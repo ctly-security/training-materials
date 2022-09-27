@@ -160,6 +160,21 @@ spec:
     type: back-end
 '''
 
+### Example of Service (LoadBalancer, only for GCP, Azure and AWS)
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+
+spec:
+  type: LoadBalancer
+  ports;
+    - targetPort: 80
+      port: 80
+      nodePort: 30008
+```
+
 ## Certified Kubernetes Security Specialist (CKS)
 
 TBD
