@@ -10,14 +10,7 @@ https://prudentialservices.udemy.com/course/certified-kubernetes-administrator-w
 
 Once you passed CKA, you can take for Certified Kubernetes Security Specialist (CKS). 
 
-## Certified Kubernetes Security Specialist (CKS)
-
-TBD
-
-### References
-https://prudentialservices.udemy.com/course/learn-docker/learn/lecture/15828702#overview 
-
-## Commands
+## Commands to Remember
 ```
 kubectl get pods -o wide 
 kubectl delete pod <pod_name> 
@@ -98,3 +91,10 @@ spec:
       matchLabels: 
         type: front-end 
 ```
+
+## Certified Kubernetes Security Specialist (CKS)
+
+TBD
+
+### References
+https://prudentialservices.udemy.com/course/learn-docker/learn/lecture/15828702#overview
