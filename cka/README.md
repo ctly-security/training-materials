@@ -45,7 +45,7 @@ kubectl create -f nginx-deployment.yaml
 #### other commands
 ```
 # pods
-kubectl get pods -o wide --namespace=dev
+kubectl get pods -o wide -n=dev
 kubectl delete pod <pod_name> 
 kubectl describe pod <pod_name> 
 kubectl run nginx --image=nginx  
@@ -67,11 +67,14 @@ kubectl scale --replicas=6 replicaset myapp-replicaset
 # Namespace
 kubectl create -f namespace-dev.yml
 kubectl create namespace dev
+kubectl get pods --all-namespaces
+
+# to connect to a service in another namespace:
+{name of service}.{namespace}.svv.cluster.local
+example: db-service.dev.svc.cluster.local
 
 # to switch to DEV namespace
 kubectl config set-context $(kubectl config curent-context) --namespace=dev
-
-kubectl get pods --all-namespaces
 ```
 
 ### Example of pod.yaml: 
