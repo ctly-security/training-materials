@@ -98,7 +98,7 @@ spec:
   replicas: 3 
 ```
 
-## Example of Replica set: 
+### Example of Replica set: 
 ```yaml
 apiVersion: apps/v1 
 kind: ReplicaSet 
@@ -123,6 +123,42 @@ spec:
       matchLabels: 
         type: front-end 
 ```
+
+### Example of Service (NodePort)
+```yaml
+apiVersion : v1
+kind: Service
+metadata:
+  name: myapp-service
+  
+spec:
+  type: NodePort
+  ports:
+    - targetPort: 80
+      port: 80
+      nodePort: 30008
+  selector:
+    app: myapp
+    type: front-end
+```
+
+### Example of Service (ClusterIP)
+'''yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: back-end
+
+spec:
+  type: ClusterIP
+  ports:
+    - targetPort: 80
+      port: 80
+  
+  selector:
+    app: myapp
+    type: back-end
+'''
 
 ## Certified Kubernetes Security Specialist (CKS)
 
