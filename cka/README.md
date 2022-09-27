@@ -46,7 +46,7 @@ kubectl scale --replicas=6 -f replicaset-definition.yaml
 kubectl scale --replicas=6 replicaset myapp-replicaset 
 
 ### Example of pod.yaml: 
-'''yml
+```yaml pod.yaml:
 apiVersion: v1 
 kind: Pod 
 metadata: 
@@ -56,7 +56,7 @@ spec:
   containers: 
     - name: nginx 
       image: nginx
-'''
+```
 
 Example of Replication Controller 
 
