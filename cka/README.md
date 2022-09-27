@@ -18,35 +18,27 @@ TBD
 https://prudentialservices.udemy.com/course/learn-docker/learn/lecture/15828702#overview 
 
 ## Commands
-
+```
 kubectl get pods -o wide 
-
 kubectl delete pod <pod_name> 
-
 kubectl describe pod <pod_name> 
-
-Kubectl run nginx --image=nginx  
+kubectl run nginx --image=nginx  
 
 kubectl run redis --image=redis123 --dry-run=client -o yaml > testing.yaml 
 
 kubectl create -f pod-definition.yaml 
-
 kubectl delete -f pod-definition.yaml 
-
 kubectl apply -f pod-definition.yaml 
-
 kubectl get replicationcontroller 
 
-kubectl get replicaset 
-
+kubectl get replicaset
 kubectl replace -f replicaset-definition.yaml 
-
 kubectl scale --replicas=6 -f replicaset-definition.yaml 
-
-kubectl scale --replicas=6 replicaset myapp-replicaset 
+kubectl scale --replicas=6 replicaset myapp-replicaset
+```
 
 ### Example of pod.yaml: 
-```yaml pod.yaml:
+```yaml
 apiVersion: v1 
 kind: Pod 
 metadata: 
@@ -58,96 +50,51 @@ spec:
       image: nginx
 ```
 
-Example of Replication Controller 
-
+### Example of Replication Controller:
+```yaml
 apiVersion: v1 
-
 kind: ReplicationController 
-
 metadata: 
-
   name: myapp-rc 
-
   labels: 
-
     app: myapp 
-
     type: front-end 
-
 spec: 
-
   template: 
-
-     
-
     metadata: 
-
       name: myapp-pod 
-
       labels: 
-
         app: myapp 
-
         type: front-end 
-
    spec: 
-
      containers: 
-
        - name: nginx-container 
-
-         image: nginx 
-
- 
-
+         image: nginx
   replicas: 3 
+```
 
- 
-
-Replica set 
-
+## Example of Replica set: 
+```yaml
 apiVersion: apps/v1 
-
 kind: ReplicaSet 
-
 metadata: 
-
   name: myapp-replicaset 
-
   labels: 
-
     app: myapp 
-
     type: front-end 
-
 spec: 
-
   template: 
-
     metadata: 
-
       name: myapp-pod 
-
       labels: 
-
         app: myapp 
-
         type: front-end 
-
     spec: 
-
       containers: 
-
         - name: nginx-container 
-
            image: nginx 
-
- 
-
     replicas: 3 
-
     selector: 
-
       matchLabels: 
-
         type: front-end 
+```
