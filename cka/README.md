@@ -75,7 +75,7 @@ Both the above commands have their own challenges. While one of it cannot accept
 #### other commands
 ```
 # pods
-kubectl get pods -o wide -n=dev
+kubectl get pods -o wide -n=dev --selector tier=front-end,env=dev,bu=finance
 kubectl delete pod <pod_name> 
 kubectl describe pod <pod_name> 
 kubectl run nginx --image=nginx  
