@@ -105,9 +105,41 @@ example: db-service.dev.svc.cluster.local
 
 # to switch to DEV namespace
 kubectl config set-context $(kubectl config curent-context) --namespace=dev
+
+# taint node
+kubectl taint node node01 KEY=VARIABLE:EFFECT
+example: kubectl taint node node01 spray=mortein:NoSchedule
+
+# label
+kubectl label node node01 color=blue
+
+# node affinity
+spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/master
+                operator: Exists
+      containers:
+ 
+OR
+
+spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/master
+                operator: In
+                values:
+                - blue
+      containers:
 ```
 
-### Example of pod.yaml: 
+### Example of pod.yaml with tolerations: 
 ```yaml
 apiVersion: v1 
 kind: Pod 
@@ -119,6 +151,11 @@ spec:
   containers: 
     - name: nginx 
       image: nginx
+  tolerations:
+    - key: spray
+      value: mortein
+      effect: NoSchedule
+      operator: Equal
 ```
 
 ### Example of Replication Controller:
