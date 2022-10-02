@@ -56,7 +56,7 @@ kubectl create service clusterip redis --tcp=6379:6379 --dry-run=client -o yaml
 (This will not use the pods labels as selectors, instead it will assume selectors as app=redis. You cannot pass in selectors as an option. So it does not work very well if your pod has a different label set. So generate the file and modify the selectors before creating the service)
 
 #### Create a Service named nginx of type NodePort to expose pod nginx's port 80 on port 30080 on the nodes:
-```yaml
+```
 kubectl expose pod nginx --type=NodePort --port=80 --name=nginx-service --dry-run=client -o yaml
 ```
 
@@ -64,7 +64,7 @@ kubectl expose pod nginx --type=NodePort --port=80 --name=nginx-service --dry-ru
 
 Or
 
-```yaml
+```
 kubectl create service nodeport nginx --tcp=80:80 --node-port=30080 --dry-run=client -o yaml
 ```
 
@@ -75,7 +75,7 @@ Both the above commands have their own challenges. While one of it cannot accept
 ### Create a daemonSet
 first create a deployment:
 
-```yaml
+```
 kubectl create deployment elasticsearch --image=k8s.gcr.io/fluentd-elasticsearch:1.20 --dry-run=client -o yaml > fluend.yaml
 ```
 
@@ -84,10 +84,19 @@ Then open the file, change kind to "daemonSet", and remove:
 - strategy
 - status
 
-# static pod
+### static pod
 check process to see where is the static yaml files located:
-```yaml
+```
 ps -ef | grep kubelet
+```
+### Performance monitoring
+```
+git clone https://github.com/kodekloudhub/kubernetes-metrics-server.git
+cd kubernetes-metrics-server
+kubectl create -f .
+
+kubectl top node
+kubectl top pod
 ```
 
 #### other commands
