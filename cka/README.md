@@ -84,6 +84,12 @@ Then open the file, change kind to "daemonSet", and remove:
 - strategy
 - status
 
+# static pod
+check process to see where is the static yaml files located:
+```yaml
+ps -ef | grep kubelet
+```
+
 #### other commands
 ```
 # pods
