@@ -92,7 +92,7 @@ kubectl delete pod <pod_name>
 kubectl describe pod <pod_name> 
 kubectl run nginx --image=nginx  
 
-kubectl run redis --image=redis123 --dry-run=client -o yaml > testing.yaml 
+kubectl run redis --image=redis123 --dry-run=client -o yaml --command -- sleep 1000 > testing.yaml 
 
 # definition
 kubectl create -f pod-definition.yaml 
