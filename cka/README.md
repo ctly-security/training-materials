@@ -64,9 +64,9 @@ kubectl expose pod nginx --type=NodePort --port=80 --name=nginx-service --dry-ru
 
 Or
 
-'''yaml
+```yaml
 kubectl create service nodeport nginx --tcp=80:80 --node-port=30080 --dry-run=client -o yaml
-'''
+```
 
 (This will not use the pods labels as selectors)
 
