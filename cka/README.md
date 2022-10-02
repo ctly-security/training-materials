@@ -99,6 +99,22 @@ kubectl top node
 kubectl top pod
 ```
 
+### Viewing Logs
+```
+kubectl logs -f webapp-1
+```
+
+### rolling update and rollback
+```
+# to implicit update (not recommended)
+kubectl set image deployment/myapp-deployment nginx=nginx:1.9.1
+
+kubectl rollout status deployment/myapp-deployment
+
+kubectl rollout history deployment/myapp-deployment
+kubectl rollout undo deployment/myapp-deployment
+```
+
 #### other commands
 ```
 # pods
