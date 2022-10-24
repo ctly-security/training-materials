@@ -205,6 +205,8 @@ spec:
       envFrom:
         - configMapRef:
             name: app-config
+        - secretRef:
+            name: app-secret
   tolerations:
     - key: spray
       value: mortein
