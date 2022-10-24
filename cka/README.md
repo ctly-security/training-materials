@@ -194,6 +194,9 @@ spec:
   containers: 
     - name: nginx 
       image: nginx
+      command:
+        - "sleep"
+        - "5000"
   tolerations:
     - key: spray
       value: mortein
