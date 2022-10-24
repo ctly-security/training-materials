@@ -197,6 +197,9 @@ spec:
       command:
         - "sleep"
         - "5000"
+      envFrom:
+        - configMapRef:
+          name: app-config
   tolerations:
     - key: spray
       value: mortein
