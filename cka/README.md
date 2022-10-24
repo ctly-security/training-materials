@@ -180,6 +180,11 @@ spec:
                 values:
                 - blue
       containers:
+
+# config maps
+kubectl create configmap app-config --from-literal=APP_COLOR=blue --from-literal=APP_MOD=prod
+
+kubectl create configmap app-config --from-file=app_config.properties
 ```
 
 ### Example of pod.yaml with tolerations: 
