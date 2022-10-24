@@ -204,7 +204,7 @@ spec:
         - "5000"
       envFrom:
         - configMapRef:
-          name: app-config
+            name: app-config
   tolerations:
     - key: spray
       value: mortein
