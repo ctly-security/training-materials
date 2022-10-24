@@ -212,6 +212,31 @@ spec:
       operator: Equal
 ```
 
+### Example of pod.yaml with env: 
+```yaml
+apiVersion: v1 
+kind: Pod 
+metadata: 
+  name: webserver 
+  type: front-end
+  namespace: dev
+spec: 
+  containers: 
+    - name: nginx 
+      image: nginx
+      command:
+        - "sleep"
+        - "5000"
+      env:
+        - name: APP_COLOR
+          value: blue
+  tolerations:
+    - key: spray
+      value: mortein
+      effect: NoSchedule
+      operator: Equal
+```
+
 ### Example of Replication Controller:
 ```yaml
 apiVersion: v1 
