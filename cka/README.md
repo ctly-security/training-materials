@@ -329,6 +329,17 @@ spec:
     limits.memory: 10Gi
 ```
 
+### Example of Config Map
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  APP_COLOR: blue
+  APP_MODE: prod
+```
+
 ## Certified Kubernetes Security Specialist (CKS)
 
 TBD
