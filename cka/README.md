@@ -122,12 +122,30 @@ for cluster, check the components if they are running with kubectl -n kube-syste
 most kubesystem files are in /etc/kubernetes/manifest
 
 ## Node
+check nodes first with:
+```
 kubectl get nodes
+```
+
+can also check node with:
+```
+kubectl describe node <NODE NAME>
+```
+
+if error, ssh into the node and check kubelet:
+```
+service kubelet status
+```
+
 you can use the following to see node logs:
 ```
 journalctl -u kubelet
 ```
 
+service kubelet yaml file is in:
+```
+/var/lib/kubelet/....
+```
 #### other commands
 ```
 # pods
