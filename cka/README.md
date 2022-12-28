@@ -145,7 +145,14 @@ journalctl -u kubelet
 service kubelet yaml file is in:
 ```
 /var/lib/kubelet/....
+
+for the config file itself:
+/etc/kubernetes/kubelet.conf
 ```
+
+## Network
+
+
 #### other commands
 ```
 # pods
