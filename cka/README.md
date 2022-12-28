@@ -150,9 +150,6 @@ for the config file itself:
 /etc/kubernetes/kubelet.conf
 ```
 
-## Network
-
-
 #### other commands
 ```
 # pods
@@ -193,6 +190,9 @@ example: kubectl taint node node01 spray=mortein:NoSchedule
 
 # label
 kubectl label node node01 color=blue
+
+# get output with custom columns
+kubectl -n admin2406 get deployments -o=custom-columns='DEPLOYMENT:.metadata.name,CONTAINER_IMAGE:.spec.template.spec.containers[0].image,READY_REPLICAS:.status.readyReplicas,NAMESPACE:.metadata.namespace' > /opt/admin2406_data
 
 # node affinity
 spec:
