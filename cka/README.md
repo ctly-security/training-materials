@@ -115,6 +115,19 @@ kubectl rollout history deployment/myapp-deployment
 kubectl rollout undo deployment/myapp-deployment
 ```
 
+### Troubleshooting
+## Cluster 
+for cluster, check the components if they are running with kubectl -n kube-system.
+
+most kubesystem files are in /etc/kubernetes/manifest
+
+## Node
+kubectl get nodes
+you can use the following to see node logs:
+```
+journalctl -u kubelet
+```
+
 #### other commands
 ```
 # pods
