@@ -194,6 +194,21 @@ kubectl label node node01 color=blue
 # get output with custom columns
 kubectl -n admin2406 get deployments -o=custom-columns='DEPLOYMENT:.metadata.name,CONTAINER_IMAGE:.spec.template.spec.containers[0].image,READY_REPLICAS:.status.readyReplicas,NAMESPACE:.metadata.namespace' > /opt/admin2406_data
 
+# to test internal services
+```
+to check for lookup
+kubectl run test-lookup --image=busybox --rm -it --restart='Never' --command -- nslookup <name>
+
+to test curl of internal service
+kubectl run curl --image=alpine/curl --rm -it -- sh
+curl np-test-service
+```
+
+# to check a kubeconfig
+```
+kubectl get nodes --kubeconfig /root/CKA/super.kubeconfig
+```
+
 # node affinity
 spec:
       affinity:
