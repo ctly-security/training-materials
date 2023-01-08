@@ -12,7 +12,7 @@ Next write a command to display the current context into `/opt/course/1/context_
 
 Finally write a second command doing the same thing into `/opt/course/1/context_default_no_kubecth.sh`, but without the use of `kubectl`.
 
-#### Answer
+### Answer for Question 01
 
 ```bash
 export do="--dry-run=client -o yaml"
@@ -38,7 +38,7 @@ Task weight: 3%
 
 Use context: kubectl config use-context k8s-c1-H
 
-Create a single *Pod* of image `httpd:2.4.41-alpine` in *Namespace* `default`. The Pod should be named `pod1` and the container should be named `pod1-container`. This *Pod* should **only** be scheduled on a master node*, do not add new labels any nodes.
+Create a single *Pod* of image `httpd:2.4.41-alpine` in *Namespace* `default`. The *Pod* should be named `pod1` and the container should be named `pod1-container`. This *Pod* should **only** be scheduled on a master *node*, do not add new labels any nodes.
 
 
 #### Answer
