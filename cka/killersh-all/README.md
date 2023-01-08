@@ -43,9 +43,10 @@ Create a single *Pod* of image `httpd:2.4.41-alpine` in *Namespace* `default`. T
 
 ### Answer for Question 02
 
+```bash
 kubectl config use-context k8s-c1-H
 
 k run pod1 --image httpd:2.4.41-alpine $do > 2.yaml
 
 vi 2.yaml
-
+```
