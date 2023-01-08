@@ -30,7 +30,7 @@ kubectl config current-context
 vi /opt/course/1/context_default_no_kubectl.sh
 
 cat ~/.kube/config | grep current-context | awk -F ' ' '{print $2}'
-
+```
 
 ### Question 02
 
