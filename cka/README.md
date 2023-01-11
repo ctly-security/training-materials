@@ -6,10 +6,11 @@ https://prudentialservices.udemy.com/course/learn-kubernetes
 CKA course and exam preparation:
 https://prudentialservices.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/ 
 
-Good Youtube Reference:
+Good Reference:
 - https://www.youtube.com/watch?v=e-vxYtSFOns&t=2165s&ab_channel=DevOpsMadeEasy
 - https://www.youtube.com/watch?v=8fFcx9EgWvk&t=191s&ab_channel=%EC%B5%9C%EA%B4%91%EB%AF%BC
 - https://www.youtube.com/watch?v=8VK9NJ3pObU&t=9s&ab_channel=jedi.ascode%28%29
+- https://gengwg.blogspot.com/2022/02/cka-simulator-kubernetes-122.html
 
 Once you passed CKA, you can take for Certified Kubernetes Security Specialist (CKS). 
 
