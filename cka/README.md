@@ -10,6 +10,12 @@ https://prudentialservices.udemy.com/course/certified-kubernetes-administrator-w
 
 Once you passed CKA, you can take for Certified Kubernetes Security Specialist (CKS). 
 
+### Domains & Competencies
+- Storage Classes [ ]
+- PV [ ]
+- PVC [ ]
+
+
 ### Useful Commands to Remember
 
 #### Create an NGINX Pod
