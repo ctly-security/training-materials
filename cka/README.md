@@ -6,6 +6,10 @@ https://prudentialservices.udemy.com/course/learn-kubernetes
 CKA course and exam preparation:
 https://prudentialservices.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/ 
 
+Ensure that you can complete all mock exams without looking at the answer.
+
+After that, do the killer.sh exam simulation, which is part of your exam registration. it is super hard hence understand the questions, answers and concept accordingly.
+
 Good Reference:
 - https://www.youtube.com/watch?v=e-vxYtSFOns&t=2165s&ab_channel=DevOpsMadeEasy
 - https://www.youtube.com/watch?v=8fFcx9EgWvk&t=191s&ab_channel=%EC%B5%9C%EA%B4%91%EB%AF%BC
